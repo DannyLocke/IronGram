@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<form action="/login" method="post" id="login" hidden>
+    <input type="text" placeholder="Username" name="username"/>
+    <input type="password" placeholder="Password" name="password"/>
+    <button type="submit">Login</button>
+</form>
+
+
+
+<form action="/logout" method="post" id="logout" hidden>
+    <button type="submit">Logout</button>
+</form>
+
+
+
+<form action="/upload" method="post" enctype="multipart/form-data" id="upload" hidden>
+    <input type="file" name="photo"/>
+
+    <br><br>
+    Please name your recipient by user name:
+    <input type="text" placeholder="Receiver name" name="receiver"/>
+    <br><br>
+
+    <label for = "isPublic">Check this box to make photo public</label>
+    <input type="checkbox"
+           name="isPublic"
+           id="isPublic"
+           value="true"/>
+
+
+    <br><br>
+    How many seconds?
+    <input type="number" placeholder="Post Life-Time" name="lifetime">
+    <br><br>
+
+    <button type="submit">Upload</button>
+</form>
+
+<br><br>
+
+Photo's received by:  {{userName}}.
+
+<br><br>
+
+<div id="photos"></div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="main.js"></script>
+
+
+
+</body>
+</html>
