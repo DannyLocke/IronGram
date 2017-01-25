@@ -1,7 +1,5 @@
 package com.theironyard.entities;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -25,7 +23,7 @@ public class Photo {
     @Column(nullable = false)
     String filename;
 
-    @Column(nullable = false)
+    @Column
     LocalDateTime postedTime;
 
     @Column(nullable = false)
